@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: white;
+  color: black;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.header-logo {
+  max-width: 100px;
+}
+
+
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link:hover {
+  text-decoration: underline;
 }
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.number {
+  font-weight: bold;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.language {
+  position: relative;
+}
+
+.language-selector {
+  background-color: white;
+  border-radius: 5px;
+ 
+}
+ul{
+  list-style-type: none;
+
+}
+.dropdown-menu {
+  background-color: white;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
