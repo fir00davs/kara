@@ -1,6 +1,4 @@
-
 import React from "react";
-import { useTranslation } from 'react-i18next';
 import img1 from '../img/kara_img1.png';
 import img3 from '../img/kara_img3.png';
 import img4 from '../img/kara_img4.png';
@@ -21,23 +19,21 @@ const trucks = [
 ];
 
 const TruckCard = ({ truck }) => {
-  const { t } = useTranslation();
   return (
     <div className="card-karaList">
       <img src={truck.image} alt={truck.name} className="truck-image" />
       <h3 className="kara_title">{truck.name}</h3>
       <p className="kara_price">{truck.price}</p>
       <p className="kara_details">{truck.details}</p>
-      <button className="kara_button">{t('truckList.details')}</button>
+      <button className="kara_button">Подробнее</button>
     </div>
   );
 };
 
 export default function TruckList() {
-  const { t } = useTranslation();
   return (
     <div id="services" className="container">
-      <h2 className="heading">{t('truckList.title')}</h2>
+      <h2 className="heading">Наши машины</h2>
       <div className="grid-scroll">
         {trucks.map(truck => (
           <TruckCard key={truck.id} truck={truck} />

@@ -1,20 +1,18 @@
 import React from "react";
-import { useTranslation } from 'react-i18next';
 
 const Reviews = () => {
-  const { t } = useTranslation();
   const videos = [
-    { id: 1, src: "https://youtube.com/embed/xHwyMRhkems?si=8TRTNikqOqZ4_yDr" },
+    { id: 1, src: "https://youtube.com/embed/xHwyMRhkems?si=8TRTNikqOqZ4_yDr"  },
     { id: 2, src: "https://youtube.com/embed/yQGfJdn_a9A?si=zNVvmtndtY9GH0KV" },
     { id: 3, src: "https://youtube.com/embed/Zzmuo-SmnQM?si=ON-POWDhUKxy4J9p" },
     { id: 4, src: "https://youtube.com/embed/eEVcEXhhLFU?si=fn-6IfFnawVVKx7P" },
     { id: 5, src: "https://youtube.com/embed/G5JGOqn4V0E?si=ftD0Vid-40a1N2Og" },
-    { id: 6, src: "https://youtube.com/embed/ukidrqIIZAM?si=10EfFgC6-GS68D35" }
+    { id: 6, src: "https://youtube.com/embed/ukidrqIIZAM?si=10EfFgC6-GS68D35"}
   ];
 
   return (
-    <div className="container">
-      <h1 className="heading">{t('reviews.title')}</h1>
+    <div id="reviews" className="container">
+      <h1 className="heading">Отзывы</h1>
       <div className="grid-scroll">
         {videos.map(video => (
           <div key={video.id} className="video-card">
@@ -29,6 +27,7 @@ const Reviews = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };
